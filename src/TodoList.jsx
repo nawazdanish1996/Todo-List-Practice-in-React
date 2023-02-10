@@ -61,6 +61,12 @@ const TodoList = () => {
         setNewEdit(id);
     }
 
+    // cancel  buttonn
+    const cancelButton = () =>{
+        setToggle(true);
+        setInput("");
+    }
+
   return (
     <div className='todoList'>
         <div className="container">
@@ -77,7 +83,7 @@ const TodoList = () => {
                             :
                             <div>
                                 <button onClick={formSubmitHandler} type="submit">Update</button>
-                                <button onClick={()=> setToggle(true)}>Cancel</button>
+                                <button onClick={cancelButton}>Cancel</button>
                             </div>
                         }
                     </form>
